@@ -1,1 +1,14 @@
-
+print('Hello World!!!')
+a=42
+b=60
+c=a*b
+print(c)
+k=10
+m=1.61*k
+print(m)
+#Exercício 1.1
+mt=10/1.61
+v=mt/c
+print(v)
+teste=v*c
+print(teste)

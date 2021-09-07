@@ -1,0 +1,131 @@
+from __future__ import print_function
+from typing_extensions import Concatenate
+
+
+def print_lyrics():
+    print("I don't know what's worth fighting for!!!")
+    print("Oh why I heard your scream!!!")
+    print("So I'm breaking the haaaaabits, tonight!!!")
+    print("")
+
+#print_lyrics()
+
+#print("Digite quantas vezes você deseja que a letra da música se repita:")
+#n = input()
+
+n=5
+
+def rpt_lyrics(n):
+    a=1
+    while(a<=n):
+        a+=1
+        print_lyrics()
+
+rpt_lyrics(n)
+
+# Exercício 3.1
+def right_justify(s):
+    conc = ""
+    contador = 0
+    comp_s = len(s)
+    falta = 70 - comp_s
+    while(contador <= falta):
+            conc = conc + " "
+            contador+=1
+            if(contador == falta):
+                print(conc+s)
+               #print(len(conc+s))
+
+s = input("Digite uma palavra:")
+
+right_justify(s)
+
+# Exercício 3.2
+# Exercício 3.2.1
+def do_twice(f):
+    f()
+    f()
+
+def print_spam():
+    print("spam")
+
+do_twice(print_spam)
+
+
+# Exercício 3.2.2
+def do_twice(f, arg):
+    f(arg)
+    f(arg)
+
+
+# Exercício 3.2.3
+def print_twice(bruce):
+    print(bruce)
+    print(bruce)
+
+# Exercício 3.2.4
+from __future__ import print_function, division
+def do_twice(f, arg):
+    print_twice(f,arg)
+    print_twice(f, arg)
+
+def print_twice(func, bruce):
+    func(bruce)
+    func(bruce)
+
+do_twice(print, "spam")
+
+# Exercício 3.2.5
+from __future__ import print_function, division
+def do_twice(f, arg):
+    f(arg)
+    f(arg)
+
+def do_four(func, arg):
+    do_twice(func, arg)
+    do_twice(func, arg)
+
+do_four(print, "spam")
+
+
+# Exercício 3.3.1
+def quadrado():
+    print('+ - - - - + - - - - +')
+    print('|         |         |')
+    print('|         |         |')
+    print('|         |         |')
+    print('|         |         |')
+    print('+ - - - - + - - - - +')
+    print('|         |         |')
+    print('|         |         |')
+    print('|         |         |')
+    print('|         |         |')
+    print('+ - - - - + - - - - +')
+
+quadrado()
+
+# Exercício 3.3.2
+def quadrado():
+    print('+ - - - - + - - - - + - - - - + - - - - +')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('+ - - - - + - - - - + - - - - + - - - - +')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('+ - - - - + - - - - + - - - - + - - - - +')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('+ - - - - + - - - - + - - - - + - - - - +')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('|         |         |         |         |')
+    print('+ - - - - + - - - - + - - - - + - - - - +')
+
+quadrado()

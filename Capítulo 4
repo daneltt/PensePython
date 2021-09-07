@@ -1,0 +1,21 @@
+#Este é o mypolygon.py que consta no capítulo 4 deste livro
+#import turtle
+#bob = turtle.Turtle()
+#print(bob)
+#bob.pd
+#for i in range(4):
+#    bob.fd(100)
+#    bob.lt(90)
+#turtle.mainloop()
+
+import turtle
+t = turtle.Turtle()
+
+def square(t):
+    t.pd
+    for i in range(4):
+        t.fd(100)
+        t.lt(90)
+    turtle.mainloop()
+
+square(t)
