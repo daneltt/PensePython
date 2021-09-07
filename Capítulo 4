@@ -1,21 +1,193 @@
-#Este é o mypolygon.py que consta no capítulo 4 deste livro
-#import turtle
-#bob = turtle.Turtle()
-#print(bob)
-#bob.pd
-#for i in range(4):
-#    bob.fd(100)
-#    bob.lt(90)
-#turtle.mainloop()
-
+"""#Este é o mypolygon.py que consta no capítulo 4 deste livro
 import turtle
-t = turtle.Turtle()
+bob = turtle.Turtle()
+print(bob)
+bob.pd
+for i in range(4):
+    bob.fd(100)
+    bob.lt(90)
+turtle.mainloop()
 
-def square(t):
+# Exercício 1
+import math
+import turtle
+bob = turtle.Turtle()
+
+# Exercício 2
+def square(t, length):
     t.pd
     for i in range(4):
-        t.fd(100)
+        t.fd(length)
         t.lt(90)
     turtle.mainloop()
 
-square(t)
+#square(bob, 300)
+
+# Exercício 3
+def polygon(t, length, n):
+    t.pd
+    l = 360/n
+    for i in range(n):
+        t.fd(length)
+        t.lt(l)
+    turtle.mainloop()
+
+lados = 8
+
+polygon(bob, 125, lados)
+
+# Exercício 4
+def circle(t, r):
+    t.pd
+    circunference = 2 * math.pi * r
+    n = int(circunference / 3) + 1
+    length = circunference / n
+    polygon(t, length, n)
+  
+circle(bob, 100)
+
+# Exercício 5
+def arc(t, r, angle):
+    arc_length = 2 * math.pi * r * angle / 360
+    n = int(arc_length / 3) + 1
+    step_length = arc_length / n
+    step_angle = angle / n
+    for i in range(n):
+        t.fd(step_length)
+        t.lt(step_angle)
+
+arc(bob, 100, 90)"""
+
+# Refatorando o capítulop todo
+
+"""import math, turtle
+
+def polyline(t, n, length, angle):
+    #Draws a square with sides of the given length.
+    #Returns the Turtle to the starting position and location.
+    for i in range(n):
+        t.fd(length)
+        t.lt(angle)
+
+def polygon(t, n, length):
+    #Draws a polygon with n sides.
+    #t: Turtle
+    #n: number of sides
+    #length: length of each side.
+    angle = 360 / n
+    polyline(t, n, length, angle)
+
+def arc(t, r, angle):
+    #Draws an arc with the given radius and angle.
+    #t: Turtle
+    #r: radius
+    #angle: angle subtended by the arc, in degrees
+    arc_length = 2 * math.pi * r * angle / 360
+    n = int(arc_length / 3) + 1
+    step_length = arc_length / n
+    step_angle = float(angle) / n
+    polyline(t, n, step_length, step_angle)
+
+def circle(t, r):
+    #Draws a circle with the given radius.
+    #t: Turtle
+    #r: radius
+    arc(t, r, 360)
+
+bob = turtle.Turtle()
+
+arc(bob, 100, 90)
+
+# the following condition checks whether we are
+# running as a script, in which case run the test code,
+# or being imported, in which case don't.
+
+if __name__ == '__main__':
+    bob = turtle.Turtle()
+
+    # draw a circle centered on the origin
+    radius = 100
+    bob.pu()
+    bob.fd(radius)
+    bob.lt(90)
+    bob.pd()
+    circle(bob, radius)
+
+    # wait for the user to close the window
+    turtle.mainloop()
+
+# Execício 4.1.2
+
+print("          __________________")
+print("__main__ | bob    --> Turtle|")
+print("         |==================|")
+print("circle   | bob    --> Turtle|")
+print("         | radius --> 100   |")
+print("         ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
+
+# Exercício 4.2
+
+import math, turtle
+
+bob = turtle.Turtle()
+bob.shape("turtle")
+
+def polyline(t, n, length, angle, pet):
+    #Draws a square with sides of the given length.
+    #Returns the Turtle to the starting position and location.
+    a = 1
+    for a in range(pet):
+        bob.pu()
+        bob.setpos(0, 0)
+        bob.pd()
+        for i in range(n):
+            t.fd(length)
+            t.lt(angle)
+        bob.pu()
+        bob.setpos(0, 0)
+        bob.pd()
+        for i in range(n):
+            t.fd(length)
+            t.rt(angle)
+        a=+1
+        bob.left(360/pet)
+        #para fazer o de 10 pétalas se deve dividir pet por 2 na linha acima
+
+def arc(t, r, angle, pet):
+    #Draws an arc with the given radius and angle.
+    #t: Turtle
+    #r: radius
+    #angle: angle subtended by the arc, in degrees
+    arc_length = 2 * math.pi * r * angle / 360
+    n = int(arc_length / 3) + 1
+    step_length = arc_length / n
+    step_angle = float(angle) / n
+    polyline(t, n, step_length, step_angle, pet)
+
+# flor de 7 pétalas
+#arc(bob, 150, 51, 7)
+
+# flor de 10 pétalas
+arc(bob, 150, 36, 10)
+
+# flor de 20 pétalas
+#arc(bob, 150, 18, 20)
+
+# Exercício 4.3
+import turtle, math
+
+bob = turtle.Turtle()
+bob.shape("turtle")
+
+def triangle(t, leng, qtd):
+    t.pd
+    n = 3
+    for u in range(qtd):
+        for i in range(n):
+            t.fd(leng)
+            t.lt(120)
+        bob.left(180-120)
+    turtle.mainloop()
+
+triangle(bob, 160, 6)"""
+

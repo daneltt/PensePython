@@ -1,0 +1,78 @@
+# Testando o comando promtp
+"""prompt = "What's your age?"
+age = input("What's your age?"
+print(age)"""
+
+# Exercício 5.1
+
+"""import time
+time.time()
+seconds = (time.time()%60)
+seconds = seconds // 1
+print("seconds: ", seconds)
+minutes = ((time.time()/60)%60)
+minutes = minutes // 1
+print("minutes: ", minutes)
+hours = ((time.time()/60)/60)%24
+hours = hours // 1
+print("hours: ", hours)
+days = ((time.time()/60)//60)//24
+print("days: ", days)
+years = days // 365
+print("years: ", years)
+
+print("It's being ",days, " days, ", hours, "h", minutes, "m", seconds, "s, since 01/01/1970!!!")"""
+
+# Exercício 5.2
+
+"""def check_fermat(a, b, c, n):
+    if n >= 2:
+        a = a ** n
+        b = b ** n
+        c = c ** n
+        if a + b == c:
+            print(a,"+",b,"=",c)
+            print("Holy smokes, Fermat was wrong!")
+        else:
+            print(a,"+",b,"=",c, ". Deu não!")
+    else:
+        print("No, that doesn't work.")
+
+def user_data(a, b, c, n):
+    a = float(input("Digite um valor INTEIRO para A: "))
+    b = float(input("Digite um valor INTEIRO para B: "))
+    c = float(input("Digite um valor INTEIRO para C: "))
+    n = float(input("Digite um valor INTEIRO para N: "))
+    a = a // 1
+    b = b // 1
+    c = c // 1
+    n = n // 1
+    check_fermat(a, b, c, n)
+
+user_data(a, b, c, n)"""
+
+# Exercício 5.3
+
+import math
+
+def is_triangle(a, b, c):
+    max_value = max(a, b, c)
+    min_value = min(a, b, c)
+    mid_value = (a + b + c) - (max_value + min_value)
+    if max_value > (min_value + mid_value):
+        print("No!")
+    elif max_value == (min_value + mid_value):
+        print("Degenerated triangle!")
+    else:
+        print("Yes!")
+
+def user_data(a, b, c):
+    a = float(input("Digite um valor para A: "))
+    b = float(input("Digite um valor para B: "))
+    c = float(input("Digite um valor para C: "))
+    a = int(a)
+    b = int(b)
+    c = int(c)
+    is_triangle(a, b, c)
+
+user_data(a, b, c)
