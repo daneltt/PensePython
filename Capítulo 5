@@ -53,9 +53,7 @@ user_data(a, b, c, n)"""
 
 # Exercício 5.3
 
-import math
-
-def is_triangle(a, b, c):
+"""def is_triangle(a, b, c):
     max_value = max(a, b, c)
     min_value = min(a, b, c)
     mid_value = (a + b + c) - (max_value + min_value)
@@ -75,4 +73,37 @@ def user_data(a, b, c):
     c = int(c)
     is_triangle(a, b, c)
 
-user_data(a, b, c)
+user_data(a, b, c)"""
+
+# Exercício 5.4
+
+"""def recurse(n, s):
+#Esta função faz com que S ganhe o dobro do valor inicial de N
+#e seja impressa no final
+    if n == 0:
+        print(s)
+    else:
+        recurse(n-1, n+s)
+
+recurse(3, 0)"""
+
+# Exercício 5.5 - Creio eu que faz uma expiral (errei =/)
+
+"""import turtle
+
+bob = turtle.Turtle()
+bob.shape("turtle")
+
+def draw(t, length, n):
+    if n == 0:
+        return
+    angle = 50
+    t.fd(length + n)
+    t.lt(angle)
+    draw(t, length, n-1)
+    t.rt(2 * angle)
+    draw(t, length, n-1)
+    t.lt(angle)
+    t.bk(length)
+
+draw(bob, 100, 10)"""
