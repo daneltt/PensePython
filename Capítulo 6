@@ -1,4 +1,4 @@
-def compare(x, y):
+"""def compare(x, y):
     if x > y:
         return(1)
     if x == y:
@@ -6,4 +6,135 @@ def compare(x, y):
     if x < y:
         return(-1)
 
-print("Valor: ", compare(1, 1))
+print("Valor: ", compare(1, 1))"""
+
+"""# Exemplo de função, hipotenusa
+import math
+
+def hipotenuse(a, b):
+    #print(a, b)
+    c = math.sqrt((a ** 2) + (b ** 2))
+    return c
+
+a = float(input("Qual o tamanho do lado A do triângulo?"))
+b = float(input("Qual o tamanho do lado B do triângulo?"))
+
+print("A Hipotenusa é igual a: ", hipotenuse(a, b))"""
+
+"""# Exemplo de função, is_between
+
+def is_between(a, b, c):
+    d = (a <= b <= c)
+    return d
+
+a = float(input("Digite um número: "))
+b = float(input("Digite um segundo número: "))
+c = float(input("Digite um terceiro número: "))
+
+if is_between(a, b, c) == True:
+    print("De certa forma B está entre A e C!")
+else:
+    print("B não está entre A e C!")"""
+
+"""# Exemplo de recursividade
+
+def factorial(n):
+    # Quando o atributo recurse chama a própria função
+    # o código retorna para o começo da função e refaz o IF com novo valor
+    # e por ai vai até que o N = 0
+    # quando N = 0 ele entra pela primeira e última vez no IF
+    # logo, ele passa a executar apenas da linha 56 abaixo em loop
+    # pela mesma quantidade de vezes que o recurse chamou a função
+    # desta forma é feito o fatorial.
+    # Os prints são apenas para vc entender esta sequência da execução
+    print("N: ", n)
+    if n == 0:
+        return 1
+    else:
+        print("")
+        recurse = factorial(n-1)
+        print("N: ", n)
+        print("Recurse: ", recurse)
+        result = n * recurse
+        print("Result: ", result)
+        return result
+
+print(factorial(4))"""
+
+# Exercício 6.1
+
+"""def b(z):
+    prod = a(z, z)
+    print(z, prod)
+    return prod
+
+def a(x, y):
+    x = x + 1
+    return x * y
+
+def c(x, y, z):
+    total = x + y + z
+    square = b(total) ** 2
+    return square
+
+x = 1
+y = x + 1
+print(c(x, y + 3, x + y))"""
+
+# Exercício 6.2
+
+"""def ack (m, n):
+    if m == 0:
+        return n+1
+    if n == 0:
+        return ack(m-1, 1)
+    return ack(m - 1, ack(m, n - 1))
+
+print(ack(3, 4))"""
+
+# Exercício 6.3
+
+def is_palindrome(pal):
+    if is_odd(pal) == True:
+        qtd_letras = len(pal) - 1
+        # Scaffolding print(qtd_letras)
+        if pal[-1] == pal[0]:
+            i = 1
+            u = qtd_letras - 1
+            for t in range((qtd_letras + 1) // 2 - 1):
+                compare_letras(pal, i, u)
+            return True
+        else:
+            return False
+        
+    return True
+
+#def is_odd(pla):
+#    if len(pla) % 2 != 0:
+#        return True
+#    else:
+#        return False
+
+def compare_letras(pal, i, u):
+    if pal[i] == pal[u]:
+        if i == u:
+            return True
+        else:
+            # Scaffolding print("Passei aqui!", i, u)
+            compare_letras(pal, i + 1, u - 1)
+    else:
+        print("Teste no IF da FUNC COMPARE_LETRAS. DIFERENTE")
+        print("i e u no else", i, u)
+
+
+palavra = input("Digite uma palavra: ")
+#if is_odd(palavra) == True:
+if (is_palindrome(palavra) == True):
+    print("Eureca!!! Temos um Palíndromo!!!")
+else:
+    print("Deu ruim!!! Não emos um Palíndromo!!! =/")
+#else:
+#    if (is_palindrome(palavra) == True):
+#        print("Eureca!!!")
+#    else:
+#        print("Deu ruim! =/")
