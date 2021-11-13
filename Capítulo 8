@@ -1,0 +1,18 @@
+##Exemplos ao longo do capítulo
+
+"""prefixes = 'JKLMNOPQ'
+suffix = 'ack'
+
+for letter in prefixes:
+    if letter == 'O' or letter == 'Q':
+        print(letter + "u" + suffix)
+    else:
+        print(letter + suffix)"""
+
+##Exercício 8.2
+
+"""word = 'banana'
+word.count('a')"""
+
+##Exercício 8.3
+
