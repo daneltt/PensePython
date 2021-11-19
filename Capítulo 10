@@ -49,3 +49,30 @@ listadef = middle(lista1)
 print(listadef)"""
 
 ## Exercício 10.4
+
+"""def chop(listinha):
+    comp = len(listinha) - 1
+    del listinha[comp]
+    del listinha[0]
+
+lista1 = [1, 2, 3, 4, 5, 6]
+print('Lista original: ', lista1)
+chop(lista1)
+print('Nova lista: ', lista1)"""
+
+## Exercício 10.5
+
+def is_sorted(listinha):
+    i = 0
+    while i < len(listinha)-1:
+        if listinha[i+1] < listinha[i]:
+            return False
+        else:
+            i = i + 1
+    return True
+
+lista1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+lista2 = ['a', 'c', 'b', 'd', 'e', 'f', 'g']
+
+print('Lista 2 está organizada!', is_sorted(lista1))
+print('Lista 2 está organizada!', is_sorted(lista2))
